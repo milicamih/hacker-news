@@ -1,0 +1,13 @@
+<div *ngIf="kidsStories && kidsStories.length > 0">
+  <button class="toggle-comments" (click)="toggleComments()"><b>
+    <i class="fa fa-{{show? 'minus':'plus'}}"></i></b>
+  </button>
+  <div *ngIf="show">
+    <ul class="comments" *ngFor="let comment of storyComments">
+      <li><span class="comment-by"><b>{{comment.by}}</b></span>
+        <div class="comment-text" [innerHTML]="comment.text"></div>
+      </li>
+      <app-comment [kidsStories]="comment.kids"></app-comment>
+    </ul>
+  </div>
+</div>

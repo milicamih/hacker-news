@@ -1,0 +1,24 @@
+.comments{
+    padding: 10px 12px 15px 5%;
+    max-width: 900px;
+    border-left: 1px solid #45A29E;
+}
+.comment-by{
+    color:#45A29E;; 
+    margin-right: 8px;
+}
+.comment-text{
+    color: #C5C6C7;
+    display: inline;
+    word-wrap:break-word;
+    text-align: justify;
+}
+.toggle-comments{
+    margin-top: 12px;
+    font-size: 14px;
+    color: #45A29E;;
+    border: 1px solid #45A29E;;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 3px;
+}

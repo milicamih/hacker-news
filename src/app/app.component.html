@@ -1,0 +1,28 @@
+<!--HEADER-->
+<div class="header">
+  <img class="logo" src="./assets/logo.png">
+  <img class="headline" src="./assets/headline.png">
+</div>
+<!--TOP STORIES-->
+<ul *ngFor="let story of allStories">
+  <li class="story-warper">
+    <div class="story-author-title-warper">
+      <span class="author"><b>{{story.by}}-</b></span>
+      <h3 class="story-title">{{story.title}}</h3>
+      <a class="story-link" href="{{story.url}}" target="_blank">  
+         <b>go to story <i class="fa fa-caret-right"></i></b>
+      </a>
+    </div>
+    <span class="score">
+      <i class="fa fa-thumbs-up"></i>{{story.score}}
+    </span>
+    <span *ngIf="story.descendants>0" class="number-of-comments">
+      <i class="fa fa-comment"></i>{{story.descendants}}
+    </span>
+    <!--COMMENTS-->
+    <app-comment [kidsStories]="story.kids"></app-comment>
+  </li>
+</ul>
+<button class="load-stories-btn" (click)="onCLickLoadMoreButton()"><b>SHOW MORE STORIES</b></button>
+<!--GLOBAL SPINNER-->
+<div class="stop-spinner" id="spinner" #spinner></div>

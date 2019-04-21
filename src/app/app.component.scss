@@ -1,0 +1,112 @@
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background-color:#060708;
+  box-shadow: 8px 9px 24px -6px rgb(107, 105, 105);
+  margin-bottom: 60px;
+
+  .logo{
+    width: 90px;
+    height:90px;
+  }
+  .headline{
+    min-width: 250px;
+    max-width: 500px;
+  }
+}
+.story-warper{
+  max-width: 900px;
+  margin: 0 auto;
+  background-color:#060708;
+  padding: 45px 10px 45px 19px;
+  box-shadow: 8px 9px 24px -6px rgb(107, 105, 105);
+  position: relative;
+
+    .story-author-title-warper{
+      margin-bottom:10px;
+
+      .author {
+        color:#45A29E;
+        font-size: 21px; 
+        margin-right: 10px;
+      }
+      .story-title{
+        color:#C5C6C7;
+        display: inline;
+      }
+    
+      .story-link{
+        color: #1f2833;
+        background-color: #66fcf1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 5px 20px 5px 12px;
+        
+         .fa{
+            position: absolute;
+            color: #1f2833;
+            font-size: 32px;
+            top: 0;
+            right: 0;
+         }  
+      } 
+      .story-link:hover{
+         background-color:#45A29E;
+      }
+    } 
+    .score, .number-of-comments{
+      margin-right: 18px;
+      color:#C5C6C7;
+    }
+    .fa {
+       color: #66fcf1;
+       font-size: 22px;
+       margin-right:3px;
+    }   
+}
+.load-stories-btn{ 
+  border: none;
+  display: block;
+  margin: 0 auto;
+  color:#66fcf1;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  font-size: 20px;
+  padding: 15px;
+  background-color: transparent;
+}   
+.load-stories-btn:hover { 
+  background-color:#45A29E;
+  box-shadow: 6px 9px 24px -6px rgba(82,82,82,1);
+}
+/*---------------------SPINNER STYLE--------------*/
+#spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid#45A29E;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px; //Half of the height of the loading graphic
+  margin-left: -50px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.start-spinner{
+  display: block;
+} 
+.stop-spinner{
+  display:none;
+  cursor: not-allowed;
+}
